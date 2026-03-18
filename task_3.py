@@ -5,9 +5,11 @@ class PointsForPlace:
     def get_points_for_place(self, place):
 
         if place > 100:
-            return f'Баллы начисляются только первым 100 участникам'
+            print ('Баллы начисляются только первым 100 участникам')
+            return self.points
         elif place < 1:
-            return f'Спортсмен не может занять нулевое или отрицательное место'
+            print('Спортсмен не может занять нулевое или отрицательное место')
+            return self.points
         else:
             self.points = 101 - place
             return self.points
@@ -19,7 +21,8 @@ class PointsForMeters:
 
     def get_points_for_meters(self, meters):
         if meters < 0:
-            return f'Количество метров не может быть отрицательным'
+            print('Количество метров не может быть отрицательным')
+            return self.points
         else:
             self.points = meters * 0.5
             return self.points
